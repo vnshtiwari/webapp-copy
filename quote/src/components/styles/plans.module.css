@@ -1,0 +1,9 @@
+.plan-item{
+    display: flex;
+}
+
+.plan-icon {
+    width: 70px;
+    height: 70px;
+}
+

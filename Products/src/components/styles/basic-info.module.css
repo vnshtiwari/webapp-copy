@@ -1,0 +1,38 @@
+.fullwidth{
+    width: 100%;
+}
+
+.contactFormContainer{
+    width: 350px;
+}
+
+.genderList{
+    display: flex;
+    justify-content: space-around;
+}
+.genderList svg{
+    width:40px;
+    height: 40px;
+}
+
+.genderList p{
+    font-size: 14px;
+    text-align: center;
+}
+.genderList div{
+    cursor: pointer;
+}
+
+.active{
+    color:#ed1b2e;
+}
+.basicDetailContainer{
+    width: 350px;
+}
+
+
+@media screen and  (max-width : 370px) {
+    .contactFormContainer, .basicDetailContainer{
+        width: 100%;
+    }
+}

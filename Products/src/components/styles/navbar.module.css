@@ -1,0 +1,11 @@
+.toolbar a:link {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+.toolbar a:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: pointer;
+}

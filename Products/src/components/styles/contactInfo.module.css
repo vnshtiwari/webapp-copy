@@ -1,0 +1,9 @@
+.basicDetailContainer{
+    width: 350px;
+}
+
+@media screen and  (max-width : 370px) {
+    .basicDetailContainer{
+        width: 100%;
+    }
+}

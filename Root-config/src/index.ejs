@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Prudential Health Insurance</title>
+  <!--
+    Remove this if you only support browsers that support async/await.
+    This is needed by babel to share largeish helper code for compiling async/await in older
+    browsers. More information at https://github.com/single-spa/create-single-spa/issues/112
+  -->
+  <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.7/runtime.min.js"></script>
+  <!--
+    This CSP allows any SSL-enabled host and for arbitrary eval(), but you should limit these directives further to increase your app's security.
+    Learn more about CSP policies at https://content-security-policy.com/#directive
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';">
+  <meta name="importmap-type" content="systemjs-importmap" />
+  <!-- If you wish to turn off import-map-overrides for specific environments (prod), uncomment the line below -->
+  <!-- More info at https://github.com/joeldenning/import-map-overrides/blob/master/docs/configuration.md#domain-list -->
+  <!-- <meta name="import-map-overrides-domains" content="denylist:prod.example.com" /> -->
+
+  <!-- Shared dependencies go into this import map. Your shared dependencies must be of one of the following formats:
+
+    1. System.register (preferred when possible) - https://github.com/systemjs/systemjs/blob/master/docs/system-register.md
+    2. UMD - https://github.com/umdjs/umd
+    3. Global variable
+
+    More information about shared dependencies can be found at https://single-spa.js.org/docs/recommended-setup#sharing-with-import-maps.
+  -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-58BLSZW');</script>
+    <!-- End Google Tag Manager -->
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js"
+      }
+    }
+
+  </script>
+  <script src="http://localhost:8084/remoteEntry.js" ></script>
+  <script src="http://localhost:8088/remoteEntry.js" ></script>
+  <script src="http://localhost:8081/remoteEntry.js" ></script>
+
+
+
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js" as="script">
+  <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" /> 
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" />
+  <meta name="description" content="Prudentil Health Insurance"/>
+  <link rel="icon" type="image/png" href="./images/logo_prudential.png" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="apple-touch-icon" href="/images/logo_prudential.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="shortcut icon" type="image/png" href="/images/logo_prudential.png">
+
+  
+  <!-- Add your organization's prod import map URL to this script's src  -->
+  <script type="systemjs-importmap" src="/importmap.json"></script>
+
+  <% if (isLocal) { %>
+    <!-- "react": "https://cdn.jsdelivr.net/npm/react@16.13.1/umd/react.production.min.js",
+    "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@16.13.1/umd/react-dom.production.min.js", -->
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "@app/root-config": "//localhost:9000/app-root-config.js",
+        "styled-components": "https://unpkg.com/styled-components/dist/styled-components.min.js",
+        "@app/AppHeader": "//localhost:8080/app-AppHeader.js",
+        "@app/AppFooter": "//localhost:8081/app-AppFooter.js",
+        "@app/appBanner": "//localhost:8082/app-appBanner.js",
+        "@app/Home": "//localhost:8083/app-Home.js",
+        "@app/Products": "//localhost:8084/app-Products.js",
+        "@pru/Claims": "//localhost:8085/pru-Claims.js",
+        "@app/Career": "//localhost:8087/app-Career.js",
+        "@app/Quote": "//localhost:8088/app-Quote.js"
+      }
+    }
+  </script>
+  <% } %>
+
+  <!--
+    If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded
+    Learn more about why at https://single-spa.js.org/docs/ecosystem-angular/#zonejs
+  -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
+  <% if (isLocal) { %>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.js"></script>
+  <% } else { %>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
+  <% } %>
+</head>
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <script>
+    System.import('@app/root-config');
+    //System.import('@app/appBanner');
+    if('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/serviceworker.js')
+                    .then((reg) => console.log('Success: ', reg.scope))
+                    .catch((err) => console.log('Failure: ', err));
+            })
+        }
+ </script>
+
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "91a097d4-4ae8-44f7-bf45-982b26121efb",
+    });
+  });
+  </script>
+
+  <main>
+    <single-spa-router mode="hash" base="/">
+
+    <div class="header" id="single-spa-application:@app/AppHeader"></div>
+    <route path="/home">
+    <div class="home" id="single-spa-application:@app/Home"></div>
+  </route>
+  <route path="/claims">
+    <div class="" id="single-spa-application:@app/Claims"></div>
+
+  </route>
+  <route path="/products">
+    <div class="products" id="single-spa-application:@app/Products"></div>
+  </route>
+  <route path="/quote">
+    <div class="quote" id="single-spa-application:@app/Quote"></div>
+  </route>
+  <div class="career" id="single-spa-application:@app/Career"></div>
+
+    <footer class="bottom">
+      <div class="footer" id="single-spa-application:@app/AppFooter"></div>
+    </footer>
+</single-spa-router>
+  </main> 
+  <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-34DN2S7BKH"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-34DN2S7BKH'); </script>
+<!-- Google Tag Manager -->
+
+</body>
+</html>

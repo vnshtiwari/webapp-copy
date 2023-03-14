@@ -1,0 +1,125 @@
+.testimonial .slick-arrow.slick-prev,
+.testimonial .slick-arrow.slick-next {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  border-radius: 15px;
+}
+
+/* .testimonial .slick-prev::before,
+.testimonial .slick-next::before {
+  display: none;
+} */
+
+.testimonial .slick-arrow.slick-next {
+  right: -70px;
+}
+
+.testimonial .slick-arrow.slick-prev {
+  left: -70px;
+}
+
+.testimonial .slick-dots li button:before {
+  font-size: 15px;
+}
+
+.testimonial .slick-dots li {
+  top: 15px;
+  bottom: 30px;
+}
+
+.blueContainer {
+  width: 50%;
+  margin-left: 40%;
+  margin-top: -85px;
+  height: 400px;
+  background-color: rgba(84, 104, 133, 0.2);
+}
+
+.needHelp {
+  padding-top: 100px;
+  margin-left: -100px;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: -50px;
+}
+
+.whatYouNeed {
+  margin-left: 10px;
+  font-size: 40px;
+}
+
+.searchContainer {
+  background-color: white;
+  width: 60%;
+  height: 80px;
+  margin-left: -100px;
+  border-radius: 10px;
+  display: flex;
+  padding-left: 20px;
+  color: gray;
+  align-items: center;
+  font-size: 20px;
+  min-width: 400px;
+}
+
+.cardContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #ed1b2e;
+  width: 100%;
+}
+.testimonial .cardImage {
+  width: 100%;
+  height: 600px;
+  padding: 7px;
+  margin-bottom: 80px;
+  border-radius: 10px;
+}
+.cardDetailView {
+  background-color: white;
+  width: 6%;
+  position: absolute;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+}
+.cardTitle {
+  font-size: 30px;
+  color: black;
+  text-align: left;
+  margin: 20px;
+  margin-bottom: 1px;
+}
+.cardDesc {
+  font-size: 18px;
+  color: black;
+  text-align: left;
+}
+.redButton {
+  background-color: red;
+  border-color: red;
+  border-style: solid;
+  width: 200px;
+  height: 50px;
+  border-radius: 30px;
+  margin-left: 20px;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.seachIcon {
+  margin: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  .cardDetailView {
+    width: 8%;
+  }
+}

@@ -1,0 +1,19 @@
+.footer{
+    font-family:  "Open Sans", sans-serif
+}
+
+html ,  body {
+    margin: 0px;
+}
+
+.containe1 a:link {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+.containe1 a:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: pointer;
+}
